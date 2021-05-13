@@ -16,7 +16,8 @@ name: Lint Code Base
 #############################
 on:
   push:
-    branches-ignore: [main]
+    # branches-ignore: [dev]
+    branches: [main]
     # Remove the line above to run when pushing to main
   pull_request:
     branches: [main]
@@ -51,23 +52,20 @@ jobs:
         uses: github/super-linter@v3
         env:
           VALIDATE_ALL_CODEBASE: false
-          VALIDATE_JAVASCRIPT_STANDARD: false
-          VALIDATE_TYPESCRIPT_STANDARD: false
-          # VALIDATE_JAVASCRIPT_ES: true
-          # VALIDATE_TYPESCRIPT_ES: true
+          
           OUTPUT_FORMAT: tap
           LINTER_RULES_PATH: ./
           JAVASCRIPT_ES_CONFIG_FILE: .eslintrc.json
           TYPESCRIPT_ES_CONFIG_FILE: .eslintrc.json
           
           VALIDATE_MARKDOWN: false
-          VALIDATE_JSCPD: false
-          VALIDATE_CLOUDFORMATION: false
-          VALIDATE_DOCKERFILE_HADOLINT: false
+          # VALIDATE_JSCPD: false
+          # VALIDATE_CLOUDFORMATION: false
+          # VALIDATE_DOCKERFILE_HADOLINT: false
 
-          VALIDATE_JSON: false
-          VALIDATE_YAML: false
-          VALIDATE_ENV: false
+          # VALIDATE_JSON: false
+          # VALIDATE_YAML: false
+          # VALIDATE_ENV: false
           VALIDATE_BASH: false
           VALIDATE_BASH_EXEC: false
           DEFAULT_BRANCH: main
