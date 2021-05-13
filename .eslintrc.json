@@ -1,0 +1,103 @@
+{
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["import", "jest", "@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+  "globals": {
+    "afterAll": true,
+    "afterEach": true,
+    "beforeAll": true,
+    "beforeEach": true,
+    "describe": true,
+    "expect": true,
+    "fit": true,
+    "it": true,
+    "jasmine": true,
+    "xit": true,
+    "jest": true
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": [0],
+    "import/no-dynamic-require": 0,
+    "import/extensions": 0,
+    "max-len": [0],
+    "quote-props": [1, "consistent-as-needed"],
+    "no-cond-assign": [2, "except-parens"],
+    "no-return-assign": [1, "except-parens"],
+    "max-classes-per-file": 0,
+    "lines-between-class-members": 0,
+    "radix": 0,
+    "no-await-in-loop": 0,
+    "space-infix-ops": 0,
+    "import/no-named-as-default": 0,
+    "no-unused-vars": [
+      1,
+      {
+        "vars": "local",
+        "args": "none"
+      }
+    ],
+    "no-shadow": 0,
+    "import/no-unresolved": 0,
+    "no-useless-constructor": 0,
+    "no-empty-function": 0,
+    "object-shorthand": 0,
+    "import/no-unresol": 0,
+    "import/order": 0,
+    "import/no-useless": 0,
+    "import/no-useless-path-segments": 0,
+    "no-return-await": 0,
+    "default-case": 0,
+    "no-else-return": 0,
+    "no-param-reassign": 0,
+    "object-curly-newline": [0],
+    "implicit-arrow-linebreak": [0],
+    "function-paren-newline": [0],
+    "operator-linebreak": [0],
+    "quotes": 0,
+    "arrow-parens": [0],
+    "no-console": [0],
+    "comma-dangle": [0],
+    "prefer-template": [0],
+    "no-unneeded-ternary": [0],
+    "class-methods-use-this": [0],
+    "no-underscore-dangle": [0],
+    "no-unused-expressions": [0],
+    "arrow-body-style": [0, "always"],
+    "global-require": [0],
+    "no-regex-spaces": [0],
+    "no-plusplus": [0],
+    "import/prefer-default-export": [0],
+    "react/prop-types": [
+      0,
+      {
+        "ignore": ["history"]
+      }
+    ],
+    "react/no-did-mount-set-state": [0],
+    "react/no-array-index-key": [0],
+    "react/jsx-closing-bracket-location": [0],
+    "react/jsx-indent": [0],
+    "react/jsx-filename-extension": [0],
+    "react/sort-comp": [0],
+    "react/jsx-indent-props": [0],
+    "react/no-children-prop": [0],
+    "prefer-destructuring": [0],
+    "indent": [0],
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
+    "semi": ["off", "always"]
+  },
+  "settings": {
+    "plugins": ["import", "jest", "@typescript-eslint"],
+    "rules": {
+      "import/no-unresolved": [0],
+      "import/extensions": [0],
+      "import/no-named-as-default-member": [0],
+      "import/no-named-as-default": [0],
+      "import/no-dynamic-require": [0]
+    }
+  }
+}
