@@ -1,4 +1,4 @@
-package rest.quarkus;
+package dasa.ecommerce;
 
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Test;
