@@ -1,7 +1,9 @@
 package io.quarkus.samples.petclinic.service;
 
 import io.quarkus.panache.common.Sort;
+import io.quarkus.samples.petclinic.dto.perfume.PerfumeSearchRequestDto;
 import io.quarkus.samples.petclinic.model.Owner;
+import io.quarkus.samples.petclinic.model.Perfume;
 import io.quarkus.samples.petclinic.model.Pet;
 import io.quarkus.samples.petclinic.model.PetType;
 import io.quarkus.samples.petclinic.model.Vet;
@@ -56,6 +58,35 @@ public class ClinicService {
         currentPet.setName(pet.getName());
         currentPet.setType(pet.getType());
         return currentPet;
+    }
+
+    public Collection<Perfume> findPerfumeByPerfumeTitle(String perfumeTitle) {
+        return Perfume.findByPerfumeTitle(perfumeTitle);
+    }
+
+
+    public Collection<Perfume> findPerfumeByRequest(PerfumeSearchRequestDto perfumeSearchRequestDto) {
+        return Perfume.findByRequest(perfumeSearchRequestDto);
+    }
+
+    public Perfume findPerfumeById(Long perfumeId) {
+        return Perfume.findById(perfumeId);
+    }
+
+
+    public Perfume savePerfume(Perfume perfume) {
+        perfume.persist();
+        return perfume;
+    }
+
+
+    public Perfume updatePerfume(long perfumeId, Perfume perfume) {
+        Perfume currentPerfume = findPerfumeById(perfumeId);
+        currentPerfume.setPerfumeTitle(perfume.getPerfumeTitle());
+        currentPerfume.setPerfumer(perfume.getPerfumer());
+        currentPerfume.setYear(perfume.getYear());
+        currentPerfume.setPerfumeGender(perfume.getPerfumeGender());
+        return currentPerfume;
     }
 
 

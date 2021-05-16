@@ -139,4 +139,17 @@
     <factorypathentry kind="VARJAR" id="M2_REPO/io/quarkus/quarkus-caffeine/1.5.2.Final/quarkus-caffeine-1.5.2.Final.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/io/quarkus/quarkus-hibernate-orm-panache-common/1.5.2.Final/quarkus-hibernate-orm-panache-common-1.5.2.Final.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/io/quarkus/quarkus-panache-common/1.5.2.Final/quarkus-panache-common-1.5.2.Final.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/quarkus/quarkus-smallrye-graphql/1.5.2.Final/quarkus-smallrye-graphql-1.5.2.Final.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/smallrye/smallrye-graphql-cdi/1.0.3/smallrye-graphql-cdi-1.0.3.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/smallrye/smallrye-graphql/1.0.3/smallrye-graphql-1.0.3.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/smallrye/smallrye-graphql-api/1.0.3/smallrye-graphql-api-1.0.3.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/eclipse/microprofile/graphql/microprofile-graphql-api/1.0.2/microprofile-graphql-api-1.0.2.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/smallrye/smallrye-graphql-schema-model/1.0.3/smallrye-graphql-schema-model-1.0.3.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/com/graphql-java/graphql-java/14.0/graphql-java-14.0.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/antlr/antlr4-runtime/4.7.2/antlr4-runtime-4.7.2.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/com/graphql-java/java-dataloader/2.2.3/java-dataloader-2.2.3.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/opentracing/opentracing-mock/0.31.0/opentracing-mock-0.31.0.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/opentracing/opentracing-api/0.31.0/opentracing-api-0.31.0.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/opentracing/opentracing-noop/0.31.0/opentracing-noop-0.31.0.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/opentracing/opentracing-util/0.31.0/opentracing-util-0.31.0.jar" enabled="true" runInBatchMode="false"/>
 </factorypath>
