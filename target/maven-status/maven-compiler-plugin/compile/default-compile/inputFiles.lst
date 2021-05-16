@@ -8,12 +8,15 @@
 /Volumes/Master/study/Bordeaux/DASA/final project/final project/dasa-tropicana-backend/src/main/java/io/quarkus/samples/petclinic/model/Specialty.java
 /Volumes/Master/study/Bordeaux/DASA/final project/final project/dasa-tropicana-backend/src/main/java/io/quarkus/samples/petclinic/rest/PerfumesResource.java
 /Volumes/Master/study/Bordeaux/DASA/final project/final project/dasa-tropicana-backend/src/main/java/io/quarkus/samples/petclinic/model/PetType.java
+/Volumes/Master/study/Bordeaux/DASA/final project/final project/dasa-tropicana-backend/src/main/java/io/quarkus/samples/petclinic/service/Interface/IUserService.java
 /Volumes/Master/study/Bordeaux/DASA/final project/final project/dasa-tropicana-backend/src/main/java/io/quarkus/samples/petclinic/model/BaseEntity.java
 /Volumes/Master/study/Bordeaux/DASA/final project/final project/dasa-tropicana-backend/src/main/java/io/quarkus/samples/petclinic/rest/VetsResource.java
 /Volumes/Master/study/Bordeaux/DASA/final project/final project/dasa-tropicana-backend/src/main/java/io/quarkus/samples/petclinic/model/package-info.java
 /Volumes/Master/study/Bordeaux/DASA/final project/final project/dasa-tropicana-backend/src/main/java/io/quarkus/samples/petclinic/dto/perfume/GraphQLRequestDto.java
 /Volumes/Master/study/Bordeaux/DASA/final project/final project/dasa-tropicana-backend/src/main/java/io/quarkus/samples/petclinic/rest/OwnersResource.java
+/Volumes/Master/study/Bordeaux/DASA/final project/final project/dasa-tropicana-backend/src/main/java/io/quarkus/samples/petclinic/rest/UsersResource.java
 /Volumes/Master/study/Bordeaux/DASA/final project/final project/dasa-tropicana-backend/src/main/java/io/quarkus/samples/petclinic/security/Roles.java
+/Volumes/Master/study/Bordeaux/DASA/final project/final project/dasa-tropicana-backend/src/main/java/io/quarkus/samples/petclinic/service/UserService.java
 /Volumes/Master/study/Bordeaux/DASA/final project/final project/dasa-tropicana-backend/src/main/java/io/quarkus/samples/petclinic/model/PerfumeQuery.java
 /Volumes/Master/study/Bordeaux/DASA/final project/final project/dasa-tropicana-backend/src/main/java/io/quarkus/samples/petclinic/rest/PetTypesResource.java
 /Volumes/Master/study/Bordeaux/DASA/final project/final project/dasa-tropicana-backend/src/main/java/io/quarkus/samples/petclinic/rest/MediaTypes.java
@@ -25,5 +28,6 @@
 /Volumes/Master/study/Bordeaux/DASA/final project/final project/dasa-tropicana-backend/src/main/java/io/quarkus/samples/petclinic/rest/VisitsResource.java
 /Volumes/Master/study/Bordeaux/DASA/final project/final project/dasa-tropicana-backend/src/main/java/io/quarkus/samples/petclinic/rest/ErrorResource.java
 /Volumes/Master/study/Bordeaux/DASA/final project/final project/dasa-tropicana-backend/src/main/java/io/quarkus/samples/petclinic/model/Role.java
+/Volumes/Master/study/Bordeaux/DASA/final project/final project/dasa-tropicana-backend/src/main/java/io/quarkus/samples/petclinic/service/Interface/IClinicService.java
 /Volumes/Master/study/Bordeaux/DASA/final project/final project/dasa-tropicana-backend/src/main/java/io/quarkus/samples/petclinic/model/Perfume.java
 /Volumes/Master/study/Bordeaux/DASA/final project/final project/dasa-tropicana-backend/src/main/java/io/quarkus/samples/petclinic/model/Pet.java

@@ -6,6 +6,7 @@ import io.quarkus.samples.petclinic.model.Owner;
 import io.quarkus.samples.petclinic.model.Perfume;
 import io.quarkus.samples.petclinic.security.Roles;
 import io.quarkus.samples.petclinic.service.ClinicService;
+import io.quarkus.samples.petclinic.service.UserService;
 
 import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
@@ -30,13 +31,14 @@ import java.util.Collection;
 import java.util.List;
 
 @Path("/api/v1")
-@GraphQLApi 
+@GraphQLApi
 @Produces(MediaTypes.APPLICATION_JSON_UTF8)
 @Consumes(MediaTypes.APPLICATION_JSON_UTF8)
 public class PerfumesResource {
 
     @Inject
     ClinicService clinicService;
+
 
     @POST
     @Path("/perfume")
@@ -55,7 +57,6 @@ public class PerfumesResource {
         }
         return Response.ok(perfume).build();
     }
-
 
     @GET
     @Path("/perfume/list")
@@ -85,47 +86,40 @@ public class PerfumesResource {
         return Response.ok(perfume).location(uri).build();
     }
 
-
     @POST
     @Path("/perfumes/search")
-    public Response searchPerfume( PerfumeSearchRequestDto perfumeSearchRequestDto) {
+    public Response searchPerfume(PerfumeSearchRequestDto perfumeSearchRequestDto) {
         Collection<Perfume> perfumes = clinicService.findPerfumeByRequest(perfumeSearchRequestDto);
         return Response.ok(perfumes).build();
 
     }
 
-
-
-    @Query("allPerfumes") 
-    @Description("Get all Perfumes from store") 
+    @Query("allPerfumes")
+    @Description("Get all Perfumes from store")
     public Collection<Perfume> getAllPerfumes() {
         Collection<Perfume> perfumes = clinicService.findPerfumeByPerfumeTitle("");
         return perfumes;
     }
 
+    @POST
+    @Path("/perfumes/graphql/perfumes")
+    public Response getPerfumeByQuery(GraphQLRequestDto request) {
+        Collection<Perfume> perfumes = clinicService.findPerfumeByPerfumeTitle("");
+        return Response.ok(perfumes).build();
+    }
 
-     @POST
-      @Path("/perfumes/graphql/perfumes") 
-      public Response getPerfumeByQuery(GraphQLRequestDto request) {
-    //      System.out.println(request);
-          Collection<Perfume> perfumes = clinicService.findPerfumeByPerfumeTitle("");
-         return Response.ok(perfumes).build();
-         }
+    @POST
+    @Path("/perfumes/search/perfumer")
+    public Response getPerfumeByPerfumer(String perfumer) {
+        Collection<Perfume> perfumes = clinicService.findPerfumeByPerfumer("perfumer");
+        return Response.ok(perfumes).build();
+    }
 
-
-         @POST
-         @Path("/perfumes/graphql/perfume") 
-         public Response getPerfumeByQuery(GraphQLRequestDto request) {
-          System.out.println(request);
-             Collection<Perfume> perfumes = clinicService.findPerfumeByPerfumeTitle("");
-            return Response.ok(perfumes).build();
-            }
-
-
-   // @PostMapping("/graphql/perfume")
-    //public ResponseEntity<ExecutionResult> getPerfumeByQuery(@RequestBody GraphQLRequestDto request) {
-    //    return ResponseEntity.ok(graphQLProvider.getGraphQL().execute(request.getQuery()));
-    //}
-
+    // @PostMapping("/graphql/perfume")
+    // public ResponseEntity<ExecutionResult> getPerfumeByQuery(@RequestBody
+    // GraphQLRequestDto request) {
+    // return
+    // ResponseEntity.ok(graphQLProvider.getGraphQL().execute(request.getQuery()));
+    // }
 
 }

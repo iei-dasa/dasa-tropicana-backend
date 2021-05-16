@@ -251,4 +251,14 @@ public class Perfume extends BaseEntity {
         return query;
     }
 
+    public static Collection<Perfume> findPerfumeByPerfumer(String perfumer) {
+        return find("lower(perfumer) like lower(concat(?1, '%')) ", Sort.ascending("perfumeTitle"), perfumer)
+                .list();
+    }
+
+    public static Collection<Perfume> findByIdIn(List<Long> perfumeIds) {
+        return list("id in ?1  ", Sort.ascending("perfumeTitle"), perfumeIds);
+    }
+
+
 }

@@ -8,6 +8,7 @@ import io.quarkus.samples.petclinic.model.Pet;
 import io.quarkus.samples.petclinic.model.PetType;
 import io.quarkus.samples.petclinic.model.Vet;
 import io.quarkus.samples.petclinic.model.Visit;
+import io.quarkus.samples.petclinic.service.Interface.IClinicService;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.transaction.Transactional;
@@ -16,7 +17,7 @@ import java.util.List;
 
 @ApplicationScoped
 @Transactional
-public class ClinicService {
+public class ClinicService implements IClinicService{
 
     public List<PetType> findAllPetTypes() {
         return PetType.listAll();
@@ -112,6 +113,15 @@ public class ClinicService {
         currentOwner.setLastName(owner.getLastName());
         currentOwner.setTelephone(owner.getTelephone());
         return currentOwner;
+    }
+
+
+    public Collection<Perfume> findPerfumeByPerfumer(String perfumer) {
+        return Perfume.findPerfumeByPerfumer(perfumer);
+    }
+
+    public Collection<Perfume> findByIdIn(List<Long> perfumeIds) {
+        return Perfume.findByIdIn(perfumeIds);
     }
 
 
