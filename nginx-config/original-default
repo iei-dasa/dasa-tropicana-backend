@@ -1,0 +1,25 @@
+ 1 ##                                                                                      
+ 2 # You should look at the following URL's in order to grasp a solid understanding        
+ 3 # of Nginx configuration files in order to fully unleash the power of Nginx.            
+ 4 # https://www.nginx.com/resources/wiki/start/                                           
+ 5 # https://www.nginx.com/resources/wiki/start/topics/tutorials/config_pitfalls/          
+ 6 # https://wiki.debian.org/Nginx/DirectoryStructure                                      
+ 7 #                                                                                       
+ 8 # In most cases, administrators will remove this file from sites-enabled/ and           
+ 9 # leave it as reference inside of sites-available where it will continue to be          
+10 # updated by the nginx packaging team.                                                  
+11 #                                                                                       
+12 # This file will automatically load configuration files provided by other               
+13 # applications, such as Drupal or Wordpress. These applications will be made            
+14 # available underneath a path with that package name, such as /drupal8.                 
+15 #                                                                                       
+16 # Please see /usr/share/doc/nginx-doc/examples/ for more detailed examples.             
+17 ##                                                                                      
+18                                                                                         
+19 # Default server configuration                                                          
+20 #                                                                                       
+21 server {                                                                                
+22     listen 80 default_server;                                                           
+23     listen [::]:80 default_server;                                                      
+default (1,1) | ft:unknown | unix | utf-8                     Alt-g: bindings, Ctrl-g: help
+                                                                                           
