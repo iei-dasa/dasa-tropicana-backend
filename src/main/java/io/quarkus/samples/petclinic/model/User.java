@@ -14,18 +14,11 @@ import java.util.Set;
 @Table(name = "users")
 public class User {
 
+
     @Id
     @Column(name = "username")
     private String username;
 
-    @Column(name = "password")
-    private String password;
-
-    @Column(name = "enabled")
-    private Boolean enabled;
-
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user", fetch = FetchType.EAGER)
-    private Set<Role> roles;
 
     public String getUsername() {
         return username;
@@ -35,21 +28,147 @@ public class User {
         this.username = username;
     }
 
-    public String getPassword() {
-        return password;
+    public int getId() {
+        return id;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public Boolean getEnabled() {
-        return enabled;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEnabled(Boolean enabled) {
-        this.enabled = enabled;
+    public void setEmail(String email) {
+        this.email = email;
     }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getPostIndex() {
+        return postIndex;
+    }
+
+    public void setPostIndex(String postIndex) {
+        this.postIndex = postIndex;
+    }
+
+    public String getActivationCode() {
+        return activationCode;
+    }
+
+    public void setActivationCode(String activationCode) {
+        this.activationCode = activationCode;
+    }
+
+    public String getPasswordResetCode() {
+        return passwordResetCode;
+    }
+
+    public void setPasswordResetCode(String passwordResetCode) {
+        this.passwordResetCode = passwordResetCode;
+    }
+
+    public String getProvider() {
+        return provider;
+    }
+
+    public void setProvider(String provider) {
+        this.provider = provider;
+    }
+
+    public Boolean getActive() {
+        return active;
+    }
+
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
+
+    @Column(name = "id")
+    private int id;
+
+    @Column(name = "email")
+    private String email;
+
+    @Column(name = "firstName")
+    private String firstName;
+
+    @Column(name = "lastName")
+    private String lastName;
+
+
+
+    @Column(name = "city")
+    private String city;
+
+    @Column(name = "address")
+    private String address;
+
+    @Column(name = "phoneNumber")
+    private String phoneNumber;
+
+
+
+    @Column(name = "postIndex")
+    private String postIndex;
+
+    @Column(name = "activationCode")
+    private String activationCode;
+
+    @Column(name = "passwordResetCode")
+    private String passwordResetCode;
+
+
+    @Column(name = "provider")
+    private String provider;
+
+
+
+    @Column(name = "active")
+    private Boolean active;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user", fetch = FetchType.EAGER)
+    private Set<Role> roles;
 
     public Set<Role> getRoles() {
         return roles;
@@ -67,4 +186,7 @@ public class User {
         role.setName(roleName);
         this.roles.add(role);
     }
+
+
+    
 }

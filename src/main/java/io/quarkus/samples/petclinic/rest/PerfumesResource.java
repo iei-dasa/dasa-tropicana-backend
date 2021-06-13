@@ -4,6 +4,7 @@ import io.quarkus.samples.petclinic.dto.perfume.GraphQLRequestDto;
 import io.quarkus.samples.petclinic.dto.perfume.PerfumeSearchRequestDto;
 import io.quarkus.samples.petclinic.model.Owner;
 import io.quarkus.samples.petclinic.model.Perfume;
+import io.quarkus.samples.petclinic.security.LoginData;
 import io.quarkus.samples.petclinic.security.Roles;
 import io.quarkus.samples.petclinic.service.ClinicService;
 import io.quarkus.samples.petclinic.service.UserService;
@@ -46,6 +47,13 @@ public class PerfumesResource {
         perfume = clinicService.savePerfume(perfume);
         URI uri = URI.create(String.format("/api/perfume/%s", perfume.getId()));
         return Response.ok(perfume).location(uri).build();
+    }
+
+
+    @POST
+    @Path("/perfume/login")
+    public Response login(LoginData data) {
+        return null;
     }
 
     @GET
