@@ -52,3 +52,28 @@ If you want to learn more about building native executables, please consult http
 REST is easy peasy with this Hello World RESTEasy resource.
 
 [Related guide section...](https://quarkus.io/guides/getting-started#the-jax-rs-resources)
+
+
+# DEPLOYMENT
+
+## DEPLOYMENT Docker
+The extension quarkus-container-image-docker is using the Docker binary and the generated Dockerfiles under src/main/docker in order to perform Docker builds.
+
+To use this feature, add the following extension to your project.
+
+```bash
+./mvnw quarkus:add-extension -Dextensions="container-image-docker"
+```
+
+### Building
+To build a container image for your project, quarkus.container-image.build=true needs to be set using any of the ways that Quarkus supports.
+```bash
+./mvnw clean package -Dquarkus.container-image.build=true
+```
+
+### Pushing
+To push a container image for your project, quarkus.container-image.push=true needs to be set using any of the ways that Quarkus supports.
+
+```bash
+./mvnw clean package -Dquarkus.container-image.push=true
+```
