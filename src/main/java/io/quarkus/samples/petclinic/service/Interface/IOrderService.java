@@ -10,7 +10,7 @@ import io.quarkus.samples.petclinic.model.Visit;
 import java.util.Collection;
 import java.util.List;
 
-public interface IOrderService {
+public interface IOrderService {
      Order saveOrder(Order order);
 
 }
