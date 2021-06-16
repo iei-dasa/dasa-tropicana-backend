@@ -39,21 +39,21 @@ public class AuthResource {
     @POST
     @Path("auth1/login1")
     public Response login1(LoginData logindata) {
-        log.info("Security context: "+logindata.email );
-        if(logindata.email == "chicong115@gmail.com"){
+        //log.info("Security context: "+logindata.email );
+        //if(logindata.email == "chicong115@gmail.com"){
 
         LoginDataResult data = new LoginDataResult();
         data.email = "chicong115@gmail.com";
         data.userRole = "ADMIN";
         return Response.ok(data).build();
 
-        }else{
-            LoginDataResult data = new LoginDataResult();
-            data.email = "chicong115@gmail.com";
-            data.userRole = "USER";
-            return Response.ok(data).build();
+       // }else{
+       //     LoginDataResult data = new LoginDataResult();
+       //     data.email = "chicong115@gmail.com";
+       //     data.userRole = "USER";
+       //     return Response.ok(data).build();
 
-        }
+        //}
     }
 
 
