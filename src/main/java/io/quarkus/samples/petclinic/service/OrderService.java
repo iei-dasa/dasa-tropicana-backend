@@ -1,7 +1,6 @@
 package io.quarkus.samples.petclinic.service;
+import io.quarkus.samples.petclinic.service.Interface.IOrderService;
 import io.quarkus.samples.petclinic.model.Order;
-
-import io.quarkus.samples.petclinic.service.Interface.IOrderService;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.transaction.Transactional;
