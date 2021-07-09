@@ -14,8 +14,8 @@ public final class HederaTransfer {
     private static final String HEDERA_NETWORK = Dotenv.load().get("HEDERA_NETWORK");
     private static final String CONFIG_FILE = Dotenv.load().get("CONFIG_FILE");
 
-    private TransferCryptoExample() {
-    }
+    // private TransferCryptoExample() {
+    // }
 
     public static void main(String[] args) throws TimeoutException, PrecheckStatusException, ReceiptStatusException {
         Client client;
